@@ -65,10 +65,10 @@ font-weight:400;
     }
     .form_cont{
         display: flex;
-    flex-direction: column;
-    justify-content:center;
-  margin-top:20px;
-  width:50%;
+       flex-direction: column;
+       justify-content:center;
+        margin-top:20px;
+        width:50%;
     }
     .check{
         height: 30px;
@@ -77,5 +77,8 @@ font-weight:400;
         font-size:19px;
         font-family: "Adobe Arabic";
     }
-
+    .paragraph{
+        font-size:9px;
+        font-family:"Adobe Arabic";
+    }
 }

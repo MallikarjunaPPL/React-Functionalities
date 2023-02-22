@@ -15,13 +15,18 @@ class form extends Component{
     }
     checkPrime=()=>{
         const {input_val}=this.state
-       
+        const n=parseInt(input_val)
         let res
         
-        if ( input_val=== "") {
+        if (n=== "" || n<2) {
+            res="Not a Prime Number"
            this.setState({isShowErr:true})
-          }else{
-            const n=parseInt(input_val)
+          }
+          else if (n===2){
+            res="Prime "
+          }
+            else{
+            
              let prime=false;
           for (let i = 2; i <n; i++) {
             if (n % i === 0) {
@@ -54,6 +59,8 @@ class form extends Component{
         const {input_val}=this.state
        
         let n=parseInt(input_val)
+       
+       
         let num1=0;
         let num2=1;
         let sum;
@@ -63,14 +70,21 @@ class form extends Component{
             num1=num2;
             num2=sum;
         }
+        if (n<=0){
+            num2="Enter valid value"
+        }
         this.setState({fibb_val:num2,isFibb:true}) ;
         
     }
    
    factorial=()=>{
+   
     const {input_val}=this.state
- 
     let fac=1
+     if (input_val<=1){
+         fac="Enter Valid value"
+     }
+    
     for (let i=2;i<=input_val;i++ ){
          fac=fac*i
     }
@@ -92,7 +106,7 @@ class form extends Component{
                 <button className='check' onClick={this.checkPrime}>
                     Check Prime
                 </button>
-                {isPrime?<p className='paragraph'>The number {input_val} is {isPrimeRes}</p>:<p className='paragraph'>The number {input_val} is</p>}
+                {isPrime?<p className='paragraph'>The number {input_val} is {isPrimeRes}</p>:<p className='paragraph'>The number {input_val} </p>}
                 
                 </div>
                 <div className='check_cont'>
@@ -100,14 +114,14 @@ class form extends Component{
                     Factorial value
                 </button>
                
-                {isFac?<p className='paragraph'>The Factorial value of {input_val} is {fac_val} </p>:<p className="paragraph">Factorial value of {input_val} is</p>}
+                {isFac?<p className='paragraph'>The Factorial value of {input_val} -- {fac_val} </p>:<p className="paragraph">Factorial value of {input_val} </p>}
                
                 </div>
                 <div className='check_cont'>
                 <button className='check' onClick={this.Fibbonaci}>
                      Fibbonaci term
                 </button>
-                {isFibb?<p className='paragraph'>The term of {input_val} is {fibb_val}</p>:<p className='paragraph'>The term of {input_val} is</p>}
+                {isFibb?<p className='paragraph'>The term of {input_val} --{fibb_val}</p>:<p className='paragraph'>The term of {input_val} </p>}
                </div>
             </div>
             

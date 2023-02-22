@@ -1,0 +1,43 @@
+.check{
+    height:35px;
+    width:300px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: black;
+    margin:10px;
+    font-size:21px;
+    font-family:"Adobe Arabic";
+}
+.input_width{
+    border-width:2px;
+    border-color:black;
+    height:35px;
+    width:300px;
+}
+.pattern_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.paragraph{
+    font-size:29px;
+    font-family:"Adobe Arabic";
+}
+.paragraph_1{
+    color:black;
+    font-size:21px;
+    font-weight:400;
+    
+}
+@media (max-width:576px){
+   
+    .input_width{
+        height:30px;
+        width:250px;
+    }
+    .paragraph{
+        font-size:17px;
+        font-family:"Adobe Arabic";
+    }
+}
