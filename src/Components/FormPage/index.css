@@ -20,7 +20,7 @@ font-weight:400;
     height:35px;
     width:300px;
 }
-.form_cont{
+.form_container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -63,7 +63,7 @@ font-weight:400;
         height:30px;
         width:250px;
     }
-    .form_cont{
+    .form_container{
         display: flex;
        flex-direction: column;
        justify-content:center;

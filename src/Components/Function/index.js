@@ -16,10 +16,13 @@ class Pattern extends Component{
         
        
         let pattern ="";
+        if (num<=0 ){
+            pattern="Enter valid Value"
+        }
     let currentCharCode = 65; 
     // ASCII code for 'A'
     for (let i = 0; i < num; i++) {
-      pattern += String.fromCharCode(currentCharCode + i)+" " ;
+      pattern += String.fromCharCode(currentCharCode + i)+" ";
       for (let j = 0; j < i; j++) {
         
         pattern += String.fromCharCode(currentCharCode + i)+" ";
@@ -37,7 +40,7 @@ class Pattern extends Component{
         return (
             <div className='pattern_cont'>
                 <p className='paragraph'>Enter the Number</p>
-                <input className='input_width' type="text" onChange={this.change} value={inp_val} placeholder="Enter value"></input>
+                <input className='input_width' type="text" onChange={this.change} value={inp_val} placeholder="Enter value"/>
                 <button className='check' onClick={this.pattern}>Get Pattern</button>
                {ispattern?<pre className='paragraph_1'>{pattern_val}</pre>:""}
             </div>

@@ -18,12 +18,12 @@ class form extends Component{
         const n=parseInt(input_val)
         let res
         
-        if (n=== "" || n<2) {
-            res="Not a Prime Number"
+        if (n=== "" || n<2 ) {
+            res="--Enter valid value"
            this.setState({isShowErr:true})
           }
           else if (n===2){
-            res="Prime "
+            res="--Prime "
           }
             else{
             
@@ -34,9 +34,9 @@ class form extends Component{
               
             }
             if (prime===false){
-                res=" Prime"
+                res="--Prime"
             }else{
-                res="Not a Prime Number"
+                res="--Not a Prime Number"
             }
           }
         }
@@ -70,7 +70,7 @@ class form extends Component{
             num1=num2;
             num2=sum;
         }
-        if (n<=0){
+        if (n<=0 ){
             num2="Enter valid value"
         }
         this.setState({fibb_val:num2,isFibb:true}) ;
@@ -81,14 +81,14 @@ class form extends Component{
    
     const {input_val}=this.state
     let fac=1
-     if (input_val<=1){
+     if (input_val<=1 ){
          fac="Enter Valid value"
      }
     
     for (let i=2;i<=input_val;i++ ){
          fac=fac*i
     }
-    
+
     this.setState({fac_val:fac,isFac:true})
    
     
@@ -98,10 +98,10 @@ class form extends Component{
         return(
             <div className='form_page'>
             <label className='label_sty' for="enter_text">Enter the Number:-</label>
-            <input id="enter_text" className="input_width" type="text" onChange={this.change} value={input_val} placeholder="Enter value"></input>
+            <input id="enter_text" className="input_width" type="text" onChange={this.change} value={input_val} placeholder="Enter value"/>
            
           {isShowErr?<p className='para'>Enter Valid Number</p>:""}  
-            <div className='form_cont'>
+            <div className='form_container'>
                 <div className='check_cont'>
                 <button className='check' onClick={this.checkPrime}>
                     Check Prime
