@@ -4,6 +4,7 @@ import FormPage from "./Components/FormPage";
 import Function from "./Components/Function";
 import Armstrong from "./Components/Armstrong";
 import Palindrome from "./Components/Palindrome";
+import Reverse from "./Components/Reverse"
 const App=()=> {
   return (
     <>
@@ -13,6 +14,7 @@ const App=()=> {
     <Function/>
     <Armstrong/>
     <Palindrome/>
+    <Reverse/>
     </div>
     </>
   );
